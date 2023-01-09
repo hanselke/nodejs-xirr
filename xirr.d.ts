@@ -1,6 +1,6 @@
 declare module 'xirr' {
     type XIRR = {
-      amount: string,
+      amount: number,
       when: number
     }
     export function xirr(transactions: XIRR[], options: any): number;
