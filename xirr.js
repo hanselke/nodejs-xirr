@@ -1,6 +1,6 @@
 'use strict';
 
-var newton = require('newton-raphson-method');
+var newton = require('@hanselke/newton-raphson-method');
 
 var MILLIS_PER_DAY = 1000*60*60*24;
 var DAYS_IN_YEAR = 365;
@@ -116,11 +116,11 @@ function xirr(transactions, options) {
     if (!guess) {
         guess = (data.total / data.deposits) / (data.days/DAYS_IN_YEAR);
     }
-    var rate = newton(value, derivative, guess, options);
+    var rate = newton(value, guess, options, derivative);
     if (rate === false) {  // truthiness strikes again, !rate is true when rate is zero
         throw new Error("Newton-Raphson algorithm failed to converge.");
     }
     return rate;
 }
 
-module.exports = xirr;
+module.exports = {xirr};

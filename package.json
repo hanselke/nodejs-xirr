@@ -21,7 +21,7 @@
   },
   "contributors": [],
   "dependencies": {
-    "newton-raphson-method": "^1.0.0"
+    "@hanselke/newton-raphson-method": "https://github.com/hanselke/newton-raphson-method"
   },
   "devDependencies": {
     "grunt": "^1.4.1",
