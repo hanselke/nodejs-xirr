@@ -1,6 +1,6 @@
 'use strict';
 
-var newton = require('@hanselke/newton-raphson-method');
+var newton = require('newton-raphson-method');
 
 var MILLIS_PER_DAY = 1000*60*60*24;
 var DAYS_IN_YEAR = 365;
